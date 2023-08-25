@@ -22,7 +22,7 @@ The code is accordingly organized.
 - Optimizer: Adam (lr = 0.01)
 <p><img src="https://github.com/Aadit3003/split-learning-healthcare/blob/8b721d004e14c7fb13f3ac55648ce51e08fc23e9/Assets/Images/activations.png" width="600" /></p>
   
-  The successive activations of the client model, starting with the input image up to the data shared with the server network.
+*The successive activations of the client model, starting with the input image up to the data shared with the server network.*
 
 **Experiments:**
 - Vary Cut-Layer (2, 3, 5, 7) to observe differences in test accuracies
@@ -30,20 +30,44 @@ The code is accordingly organized.
 
 <p> <img src="https://github.com/Aadit3003/split-learning-healthcare/blob/8b721d004e14c7fb13f3ac55648ce51e08fc23e9/Assets/Images/cut.png" width="600" /></p>
  
-  The training loss of two client networks as the cut-layer is varied.
+*The training loss of two client networks as the cut-layer is varied.*
 
 # 2. Split U-Net and Semantic Segmentation
 **Dataset:** [Lung Segmentation from Chest X-rays](https://www.kaggle.com/code/nikhilpandey360/lung-segmentation-from-chest-x-ray-datasethttps://www.kaggle.com/code/nikhilpandey360/lung-segmentation-from-chest-x-ray-dataset) (Semantic Segmentation)
 
+**Model Details:** 
+- U-Net
+- 1000 train images, 200 test images
+- Epochs = 20
+- Cut_Layer = 3 (default)
+- Number of Clients = 1 (default)
+- learning rate: 0.001
+- Loss Function: Dice Loss
+- Optimizer: Adam (lr = 0.01)
+<p><img src="https://github.com/Aadit3003/split-learning-healthcare/blob/8b721d004e14c7fb13f3ac55648ce51e08fc23e9/Assets/Images/activations.png" width="600" /></p>
+
+In this paradigm, we have four networks: The Client Encoder, Server Encoder, Server Decoder, and the Client Decoder. It follows the same principle as the Split Resnet, however, the activations are simply passed on twice, and so too are the gradients. In other words, it is simply an extension of the Split Resnet in both directions.
+
+<p> <img src="https://github.com/Aadit3003/split-learning-healthcare/blob/8b721d004e14c7fb13f3ac55648ce51e08fc23e9/Assets/Images/sem.png" width="600" /></p>
+
+*An example of the semantic segmentation of Chest X-rays by the Split U-Net.*
+
+<p> <img src="https://github.com/Aadit3003/split-learning-healthcare/blob/8b721d004e14c7fb13f3ac55648ce51e08fc23e9/Assets/Images/exp1.png" width="600" /></p>
+<p> <img src="https://github.com/Aadit3003/split-learning-healthcare/blob/8b721d004e14c7fb13f3ac55648ce51e08fc23e9/Assets/Images/exp2.png" width="600" /></p>
+
+*Observing the loss, accuracies and Jaccard coefficients during the training loop of Split U-Nets by varying the cut-layer.*
+
 # 3. Threat Models and Defensive Techniques
 We implemented the following Threat Models and the respective defensive techniques:
-- [Feature-Space Hijacking Attack (FSHA)](https://github.com/Aadit3003/split-learning-healthcare/blob/8b721d004e14c7fb13f3ac55648ce51e08fc23e9/3_Threat_Models/attack-1-tiger.ipynb) - [Pasquini et al. (2021) 'Unleashing the Tiger: Inference Attacks on Split Learning'](https://arxiv.org/abs/2012.02670)
+- [Feature-Space Hijacking Attack (FSHA)](https://github.com/Aadit3003/split-learning-healthcare/blob/8b721d004e14c7fb13f3ac55648ce51e08fc23e9/3_Threat_Models/attack-1-tiger.ipynb) -_ Pasquini et al. (2021) 'Unleashing the Tiger: Inference Attacks on Split Learning'
 - [Adversarial Reconstruction Attack (ADRA)](https://github.com/Aadit3003/split-learning-healthcare/blob/52eee8be308920cf953074375d51a4d0d0dc1134/3_Threat_Models/attack-2-mit.ipynb)
 
 <p> <img src="https://github.com/Aadit3003/split-learning-healthcare/blob/8b721d004e14c7fb13f3ac55648ce51e08fc23e9/Assets/Images/att_2.png" width="600" /></p>
-The reconstruction of the input images by an adversarial network.
+
+*The reconstruction of the input images by an adversarial network.*
 
 <p> <img src="https://github.com/Aadit3003/split-learning-healthcare/blob/8b721d004e14c7fb13f3ac55648ce51e08fc23e9/Assets/Images/def_1.png" width="600" /></p>
-Using a Proxy adversarial network as a defensive measure while training, the malicious server is unable to successfully recreate the input image! 
+
+*Using a Proxy adversarial network as a defensive measure while training, the malicious server is unable to successfully recreate the input image!*
 
 
