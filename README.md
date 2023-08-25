@@ -44,7 +44,6 @@ The code is accordingly organized.
 - learning rate: 0.001
 - Loss Function: Dice Loss
 - Optimizer: Adam (lr = 0.01)
-<p><img src="https://github.com/Aadit3003/split-learning-healthcare/blob/8b721d004e14c7fb13f3ac55648ce51e08fc23e9/Assets/Images/activations.png" width="600" /></p>
 
 In this paradigm, we have four networks: The Client Encoder, Server Encoder, Server Decoder, and the Client Decoder. It follows the same principle as the Split Resnet, however, the activations are simply passed on twice, and so too are the gradients. In other words, it is simply an extension of the Split Resnet in both directions.
 
@@ -52,8 +51,8 @@ In this paradigm, we have four networks: The Client Encoder, Server Encoder, Ser
 
 *An example of the semantic segmentation of Chest X-rays by the Split U-Net.*
 
-<p> <img src="https://github.com/Aadit3003/split-learning-healthcare/blob/acb1e4cb5e7ee355da5b4f06bd9e267a08866ee3/Assets/Images/exp1.png" width="600" /></p>
-<p> <img src="https://github.com/Aadit3003/split-learning-healthcare/blob/acb1e4cb5e7ee355da5b4f06bd9e267a08866ee3/Assets/Images/exp2.png" width="600" /></p>
+<p> <img src="https://github.com/Aadit3003/split-learning-healthcare/blob/acb1e4cb5e7ee355da5b4f06bd9e267a08866ee3/Assets/Images/exp1.png"/></p>
+<p> <img src="https://github.com/Aadit3003/split-learning-healthcare/blob/acb1e4cb5e7ee355da5b4f06bd9e267a08866ee3/Assets/Images/exp2.png"  /></p>
 
 *Observing the loss, accuracies and Jaccard coefficients during the training loop of Split U-Nets by varying the cut-layer.*
 
