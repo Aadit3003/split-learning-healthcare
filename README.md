@@ -20,15 +20,16 @@ The code is accordingly organized.
 - learning rate: 0.001
 - Loss Function: Cross-Entropy Loss
 - Optimizer: Adam (lr = 0.01)
-
-  <img src="https://github.com/Aadit3003/split-learning-healthcare/blob/8b721d004e14c7fb13f3ac55648ce51e08fc23e9/Assets/Images/activations.png" width="600" />
+<p><img src="https://github.com/Aadit3003/split-learning-healthcare/blob/8b721d004e14c7fb13f3ac55648ce51e08fc23e9/Assets/Images/activations.png" width="600" /></p>
+  
   The successive activations of the client model, starting with the input image up to the data shared with the server network.
 
 **Experiments:**
 - Vary Cut-Layer (2, 3, 5, 7) to observe differences in test accuracies
 - Vary Number of Clients (1, 2, 3, 4, 6) to observe differences in test accuracies
 
-  <img src="https://github.com/Aadit3003/split-learning-healthcare/blob/8b721d004e14c7fb13f3ac55648ce51e08fc23e9/Assets/Images/cut.png" width="600" />
+<p> <img src="https://github.com/Aadit3003/split-learning-healthcare/blob/8b721d004e14c7fb13f3ac55648ce51e08fc23e9/Assets/Images/cut.png" width="600" /></p>
+ 
   The training loss of two client networks as the cut-layer is varied.
 
 # 2. Split U-Net and Semantic Segmentation
