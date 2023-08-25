@@ -48,7 +48,7 @@ The code is accordingly organized.
 
 In this paradigm, we have four networks: The Client Encoder, Server Encoder, Server Decoder, and the Client Decoder. It follows the same principle as the Split Resnet, however, the activations are simply passed on twice, and so too are the gradients. In other words, it is simply an extension of the Split Resnet in both directions.
 
-<p> <img src="https://github.com/Aadit3003/split-learning-healthcare/blob/8b721d004e14c7fb13f3ac55648ce51e08fc23e9/Assets/Images/sem.png" width="600" /></p>
+<p> <img src="https://github.com/Aadit3003/split-learning-healthcare/blob/16de1e4c46a588c9ce727aa7b9f268846aa92d00/Assets/Images/sem.png" width="600" /></p>
 
 *An example of the semantic segmentation of Chest X-rays by the Split U-Net.*
 
