@@ -36,7 +36,14 @@ The code is accordingly organized.
 **Dataset:** [Lung Segmentation from Chest X-rays](https://www.kaggle.com/code/nikhilpandey360/lung-segmentation-from-chest-x-ray-datasethttps://www.kaggle.com/code/nikhilpandey360/lung-segmentation-from-chest-x-ray-dataset) (Semantic Segmentation)
 
 # 3. Threat Models and Defensive Techniques
-Threat Models:
-- Feature-Space Hijacking Attack (FSHA) - [Pasquini et al. (2021) 'Unleashing the Tiger: Inference Attacks on Split Learning'](https://arxiv.org/abs/2012.02670)
-- Adversarial Reconstruction Attack (ADRA)
+We implemented the following Threat Models and the respective defensive techniques:
+- [Feature-Space Hijacking Attack (FSHA)](https://github.com/Aadit3003/split-learning-healthcare/blob/8b721d004e14c7fb13f3ac55648ce51e08fc23e9/3_Threat_Models/attack-1-tiger.ipynb) - [Pasquini et al. (2021) 'Unleashing the Tiger: Inference Attacks on Split Learning'](https://arxiv.org/abs/2012.02670)
+- [Adversarial Reconstruction Attack (ADRA)](https://github.com/Aadit3003/split-learning-healthcare/blob/52eee8be308920cf953074375d51a4d0d0dc1134/3_Threat_Models/attack-2-mit.ipynb)
+
+<p> <img src="https://github.com/Aadit3003/split-learning-healthcare/blob/8b721d004e14c7fb13f3ac55648ce51e08fc23e9/Assets/Images/att_2.png" width="600" /></p>
+The reconstruction of the input images by an adversarial network.
+
+<p> <img src="https://github.com/Aadit3003/split-learning-healthcare/blob/8b721d004e14c7fb13f3ac55648ce51e08fc23e9/Assets/Images/def_1.png" width="600" /></p>
+Using a Proxy adversarial network as a defensive measure while training, the malicious server is unable to successfully recreate the input image! 
+
 
