@@ -52,8 +52,8 @@ In this paradigm, we have four networks: The Client Encoder, Server Encoder, Ser
 
 *An example of the semantic segmentation of Chest X-rays by the Split U-Net.*
 
-<p> <img src="https://github.com/Aadit3003/split-learning-healthcare/blob/8b721d004e14c7fb13f3ac55648ce51e08fc23e9/Assets/Images/exp1.png" width="600" /></p>
-<p> <img src="https://github.com/Aadit3003/split-learning-healthcare/blob/8b721d004e14c7fb13f3ac55648ce51e08fc23e9/Assets/Images/exp2.png" width="600" /></p>
+<p> <img src="https://github.com/Aadit3003/split-learning-healthcare/blob/acb1e4cb5e7ee355da5b4f06bd9e267a08866ee3/Assets/Images/exp1.png" width="600" /></p>
+<p> <img src="https://github.com/Aadit3003/split-learning-healthcare/blob/acb1e4cb5e7ee355da5b4f06bd9e267a08866ee3/Assets/Images/exp2.png" width="600" /></p>
 
 *Observing the loss, accuracies and Jaccard coefficients during the training loop of Split U-Nets by varying the cut-layer.*
 
