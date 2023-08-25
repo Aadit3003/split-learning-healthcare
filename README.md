@@ -9,9 +9,9 @@ In this project, we explored three aspects of Split learning. First, we implemen
 The code is accordingly organized.
 
 # 1. Split Resnet-34 and Experiments
-Dataset: [Diabetic Retinopathy](https://www.kaggle.com/datasets/tanlikesmath/diabetic-retinopathy-resized) (Retinal Images; 2-class classification)
+**Dataset:** [Diabetic Retinopathy](https://www.kaggle.com/datasets/tanlikesmath/diabetic-retinopathy-resized) (Retinal Images; 2-class classification)
 
-Model Details: 
+**Model Details:** 
 - Resnet-34
 - 1000 train images, 200 test images
 - Epochs = 20
@@ -21,16 +21,18 @@ Model Details:
 - Loss Function: Cross-Entropy Loss
 - Optimizer: Adam (lr = 0.01)
 
-  <img src="https://github.com/Aadit3003/split-learning-healthcare/blob/8b721d004e14c7fb13f3ac55648ce51e08fc23e9/Assets/Images/activations.png" width="360" />
+  <img src="https://github.com/Aadit3003/split-learning-healthcare/blob/8b721d004e14c7fb13f3ac55648ce51e08fc23e9/Assets/Images/activations.png" width="600" />
+  The successive activations of the client model, starting with the input image up to the data shared with the server network.
 
-Experiments:
+**Experiments:**
 - Vary Cut-Layer (2, 3, 5, 7) to observe differences in test accuracies
 - Vary Number of Clients (1, 2, 3, 4, 6) to observe differences in test accuracies
 
-- 
+  <img src="https://github.com/Aadit3003/split-learning-healthcare/blob/8b721d004e14c7fb13f3ac55648ce51e08fc23e9/Assets/Images/cut.png" width="600" />
+  The training loss of two client networks as the cut-layer is varied.
 
 # 2. Split U-Net and Semantic Segmentation
-Dataset: [Lung Segmentation from Chest X-rays](https://www.kaggle.com/code/nikhilpandey360/lung-segmentation-from-chest-x-ray-datasethttps://www.kaggle.com/code/nikhilpandey360/lung-segmentation-from-chest-x-ray-dataset) (Semantic Segmentation)
+**Dataset:** [Lung Segmentation from Chest X-rays](https://www.kaggle.com/code/nikhilpandey360/lung-segmentation-from-chest-x-ray-datasethttps://www.kaggle.com/code/nikhilpandey360/lung-segmentation-from-chest-x-ray-dataset) (Semantic Segmentation)
 
 # 3. Threat Models and Defensive Techniques
 Threat Models:
