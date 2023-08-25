@@ -9,7 +9,7 @@ In this project, we explored three aspects of Split learning. First, we implemen
 The code is accordingly organized.
 
 # 1. Split Resnet-34 and Experiments
-Dataset: [Diabetic Retinopathy] (https://www.kaggle.com/datasets/tanlikesmath/diabetic-retinopathy-resized) (Retinal Images; 2-class classification)
+Dataset: [Diabetic Retinopathy](https://www.kaggle.com/datasets/tanlikesmath/diabetic-retinopathy-resized) (Retinal Images; 2-class classification)
 
 Model Details: 
 - Resnet-34
@@ -20,6 +20,8 @@ Model Details:
 - learning rate: 0.001
 - Loss Function: Cross-Entropy Loss
 - Optimizer: Adam (lr = 0.01)
+
+  <img src="https://github.com/Aadit3003/split-learning-healthcare/blob/8b721d004e14c7fb13f3ac55648ce51e08fc23e9/Assets/Images/activations.png" width="360" />
 
 Experiments:
 - Vary Cut-Layer (2, 3, 5, 7) to observe differences in test accuracies
